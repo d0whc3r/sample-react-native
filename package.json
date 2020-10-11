@@ -6,6 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo web",
     "eject": "expo eject",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src/ --fix",
     "ci": "rm -fr yarn.lock node_modules dist build && yarn install"
   },
   "dependencies": {

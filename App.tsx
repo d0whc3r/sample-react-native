@@ -6,6 +6,7 @@ import HomeScreen from './src/screens/home.screen';
 import ComponentsScreen from './src/screens/components.screen';
 import ListScreen from './src/screens/list.screen';
 import { NavigationRoutes, RootStackParamList } from './src/types';
+import ImageScreen from './src/screens/image.screen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Stack.Screen name={NavigationRoutes.HOME} component={HomeScreen} options={{ title: 'Welcome' }} />
         <Stack.Screen name={NavigationRoutes.COMPONENT} component={ComponentsScreen} />
         <Stack.Screen name={NavigationRoutes.LIST} component={ListScreen} />
+        <Stack.Screen name={NavigationRoutes.IMAGE} component={ImageScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
