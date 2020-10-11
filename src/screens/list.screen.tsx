@@ -18,8 +18,13 @@ const ListScreen: React.FC = () => {
       data={friends}
       keyExtractor={(friend) => friend.name}
       renderItem={({ item }) => {
-        return <TextMargin>{item.name} - Age {item.age}</TextMargin>;
-      }} />
+        return (
+          <TextMargin>
+            {item.name} - Age {item.age}
+          </TextMargin>
+        );
+      }}
+    />
   );
 };
 
