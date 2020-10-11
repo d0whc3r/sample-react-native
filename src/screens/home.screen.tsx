@@ -13,7 +13,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
       {Object.values(NavigationRoutes)
         .filter((name) => name !== NavigationRoutes.HOME)
         .map((name) => (
-          <Button key={name} title={'Go to ' + name} onPress={() => navigation.navigate(name)} />
+          <Button key={name} title={`Go to ${name} Demo`} onPress={() => navigation.navigate(name)} />
         ))}
     </View>
   );
