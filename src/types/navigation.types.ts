@@ -6,7 +6,8 @@ export enum NavigationRoutes {
   COUNTER = 'Counter',
   COLOR = 'Color',
   SQUARE = 'Square',
-  TEXT = 'Text'
+  TEXT = 'Text',
+  BOX = 'Box'
 }
 
 export type RootStackParamList = {
@@ -18,4 +19,5 @@ export type RootStackParamList = {
   [NavigationRoutes.COLOR]: undefined;
   [NavigationRoutes.SQUARE]: undefined;
   [NavigationRoutes.TEXT]: undefined;
+  [NavigationRoutes.BOX]: undefined;
 };

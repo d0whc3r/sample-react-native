@@ -11,6 +11,7 @@ import CounterScreen from './src/screens/counter.screen';
 import ColorScreen from './src/screens/color.screen';
 import SquareScreen from './src/screens/square.screen';
 import TextScreen from './src/screens/text.screen';
+import BoxScreen from './src/screens/box/box.screen';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <Stack.Screen name={NavigationRoutes.COLOR} component={ColorScreen} />
         <Stack.Screen name={NavigationRoutes.SQUARE} component={SquareScreen} />
         <Stack.Screen name={NavigationRoutes.TEXT} component={TextScreen} />
+        <Stack.Screen name={NavigationRoutes.BOX} component={BoxScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
