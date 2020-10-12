@@ -1,21 +1,24 @@
-import React, { useMemo, useRef } from 'react';
+import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-interface ColorCounterProps {
+export interface ColorCounterProps {
   color: 'red' | 'green' | 'blue';
   value: number;
   set: (x: number) => void;
+  number?: number;
 }
 
-const ColorCounter: React.FC<ColorCounterProps> = ({ color, value, set }) => {
+const DEFAULT_DIFF_NUMBER = 15;
+
+const ColorCounter: React.FC<ColorCounterProps> = ({ color, value, set, number = DEFAULT_DIFF_NUMBER }) => {
   console.log('reload', color, value);
 
   const increase = () => {
-    set(Math.min(value + 50, 256));
+    set(Math.min(value + number, 256));
   };
 
   const decrease = () => {
-    set(Math.max(value - 50, 0));
+    set(Math.max(value - number, 0));
   };
 
   return (
@@ -25,6 +28,10 @@ const ColorCounter: React.FC<ColorCounterProps> = ({ color, value, set }) => {
       <Button title={`Decrease ${color}`} onPress={decrease} />
     </View>
   );
+};
+
+ColorCounter.defaultProps = {
+  number: DEFAULT_DIFF_NUMBER
 };
 
 export default React.memo(ColorCounter);
